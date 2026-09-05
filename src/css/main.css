@@ -1,1 +1,118 @@
-/* Your CSS here. */
+/* Page background, with the card floating on top of it.
+   Flex + min-height fills the viewport so the card can sit centered
+   vertically no matter how tall it is once collapsed or expanded. */
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #1a89b1;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* The gray card. As a flex item, margin: auto centers it on both axes. */
+.card {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 28px 40px;
+  background-color: #a6a5a5;
+  color: rgb(255 255 255);
+}
+
+/* Required: exactly 150px by 150px.
+   The frame clips a zoomed-in version of the source photo so more of the
+   body (and less of the mountain background) shows in the square crop. */
+.photo-frame {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.profile-photo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.8);
+  transform-origin: center 38%;
+}
+
+.name {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Hidden until the name is clicked; the JS toggles .is-open. */
+.card-details {
+  display: none;
+}
+
+.card-details.is-open {
+  display: block;
+}
+
+.email {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.links {
+  margin: 14px 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.links a {
+  color: #2a1fb8;
+}
+
+.bio {
+  margin: 16px 0 0;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Row of color buttons at the bottom of the card. */
+.color-buttons {
+  margin: 22px 0 0;
+  text-align: center;
+}
+
+.color-button {
+  margin: 0 6px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.color-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Themes applied to <body> by the buttons. */
+.theme-red {
+  background-color: #fb2605;
+}
+
+.theme-green {
+  background-color: #2F8F4E;
+}
+
+.theme-orange {
+  background-color: #e05b2b;
+}

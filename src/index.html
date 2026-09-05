@@ -9,8 +9,39 @@
 </head>
 
 <body>
-  <h1>Hello World! My name is Daniel Dumas!</h1>
-  <img src="assets/image.jpg" />
+  <div class="card">
+    <div class="photo-frame">
+      <img class="profile-photo" src="assets/image.JPG" alt="Daniel Dumas at Machu Picchu">
+    </div>
+
+    <h1 class="name">Daniel Dumas</h1>
+
+    <div class="card-details">
+      <h2 class="email">danieldumas98@gmail.com</h2>
+
+      <p class="links"><a href="https://github.com/dumas98">GitHub</a></p>
+
+      <p class="bio">
+        Daniel's a career-changer turned infra nerd. He started out in industrial engineering, then
+        spent a few years doing RevOps and data analytics at places like Qualtrics, Unilever and a
+        travel SaaS startup. He realized what he actually loved was the systems underneath all that
+        data. Now he's doing an MCS at UIUC, chasing infrastructure engineering roles.
+      </p>
+
+      <p class="bio">
+        When he's not in class, he's building things from scratch to see how they tick, like a C++
+        LSM-tree storage engine. The rest of the time he's probably at the piano, out on a long hike
+        or run, or in the gym; he'd rather build the database than just query it, but he needs the
+        mountain air and the workouts to balance it out.
+      </p>
+    </div>
+
+    <div class="color-buttons">
+      <button class="color-button" type="button" data-theme="theme-red">Red</button>
+      <button class="color-button" type="button" data-theme="theme-green">Green</button>
+      <button class="color-button" type="button" data-theme="theme-orange">Orange</button>
+    </div>
+  </div>
 
   <script src="bundle.js" type="text/javascript"></script>
 </body>
